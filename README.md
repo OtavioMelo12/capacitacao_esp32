@@ -3,7 +3,7 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ## Preparação de Ambiente
 
-##Configurando o esp32 em seu computador
+## Configurando o esp32 em seu computador
 
 ### Utilizando WSL (Windows Subsystem for Linux) no Windows 10:
 Primeiramente siga esse [tutorial](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) para instalar o WSL no seu computador.
