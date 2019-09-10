@@ -132,7 +132,7 @@ Com esse shell é possível também acessar o terminal interno do esp32 e contro
 
 #### Instalação
 
-1.1. O rshell precisa de Python3, e do pip3 para ser instalado. Caso já não tenha:
+1.1. O rshell precisa de Python3, e do pip3 para ser instalado. Caso não tenha:
 
 ```bash
 sudo apt-get install python3-pip
@@ -189,9 +189,9 @@ Com isso é possível controlar e programar o esp32 linha por linha utilizando m
 
 EX: 
 ```bash
-from machine import Pin
-led = Pin(2, Pin.OUT)
-led.on()
+>> from machine import Pin
+>> led = Pin(2, Pin.OUT)
+>> led.on()
 ```
 #### Links úteis
 - [Guia de programação do ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/) (Espressif IoT development framework)
