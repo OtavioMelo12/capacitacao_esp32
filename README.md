@@ -5,8 +5,8 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ## Configurando o esp32 em seu computador
 
-### Utilizando WSL (Windows Subsystem for Linux) no Windows 10:
-Primeiramente siga esse [tutorial](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) para instalar o WSL no seu computador.
+### Utilizando Linux:
+
 ### 1. Instalação da toolchain
 1.1. No seu terminal, navegue`$ cd`até a pasta raiz do seu linux, liste`$ ls -a`os arquivos ocultos desse diretório e localize um chamado `~/.bashrc`.
 
@@ -48,21 +48,16 @@ sudo chmod -R 777 ~/.esp/esp-idf/
 cd hello_world && make menuconfig
 ```
 
-3.4. Conecte o ESP no seu computador e descubra a porta COM em que ele esta conectado
-
-#### Descobrindo a porta em que o ESP esta conectado
-
-No **Gerenciador de Dispositivos** do Windows, procure por *Portas (COM e LPT)* e verifique a numeração. 
-Ex.: (COM 3), 3 é o número da porta COM
+3.4. Conecte o ESP no seu computador e descubra a porta em que ele está conectado. No linux, geralmente é a porta ´USB0´
 
 3.5. Feito isso, suba o firmware configurado anteriormente para o ESP
 ```bash
-make flash ESPPORT=/dev/ttyS{número_da_porta_COM}
+make flash ESPPORT=/dev/ttyUSB0
 ```
 
 3.6. Você pode conferir a saída do esp32
 ```bash
-make monitor ESPPORT=/dev/tty{nome_da_porta_com}
+make monitor ESPPORT=/dev/ttyUSB0
 ```
 
 Tudo certo até aqui? Prossiga para a instalação do micropython
@@ -123,8 +118,20 @@ git submodule update --init --force
 make erase && make deploy
 ```
 
-### Utilizando Linux:
-Exatamente a mesma configuração, exceto pelos passos **3.5** e **3.6**, em que a porta padrao do Linux é a `ttyUSB0`
+### Utilizando WSL (Windows Subsystem for Linux) no Windows 10:
+Primeiramente siga esse [tutorial](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) para instalar o WSL no seu computador.
+
+Provavelmente o WSL virá sem nada, então é necessário instalar algumas dependencias básicas
+```bash
+sudo apt-get install python python3 vim
+```
+
+Em seguida, siga exatamente a mesma configuração anterior, exceto pelos passos **3.5** e **3.6**, em que será necessário olhar em qual porta o esp32 esta conectado.
+
+#### Descobrindo a porta em que o ESP esta conectado
+
+No **Gerenciador de Dispositivos** do Windows, procure por *Portas (COM e LPT)* e verifique a numeração. 
+Ex.: (COM 3). Então a porta será ´ttyS3´, localizada em ´/dev/ttyS3´.
 
 ## Controlando o esp32
 Para manipular os arquivos entre o esp32 e o computador, podemos utilizar o `rshell`, com ele é possível enviar arquivos do PC para o microcontrolador e vice-versa, assim como deletar, e listar.
