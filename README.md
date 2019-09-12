@@ -1,7 +1,21 @@
 # Capacitação de ESP32
 Capacitação básica para esp32 utilizando [MicroPython](https://micropython.org).
 
+## Tabela de Coteúdo
+
+- [Configurando Esp32](#Configurando o esp32 em seu computador)
+	 - [Instalação Toolchain](#1. Instalação da toolchain)
+	 - [Instalação ESP-IDF](#2. Instalação da API ESP-IDF)
+	 - [Hello World](#3. Rodando exemplo Hello World)
+	 - [Instalação MicroPython](#4. Instalando o Micropython)
+- [Controlando Esp32](#Controlando o esp32)
+	 - [Instalçao rshell](#Instalação)
+	 - [Principais Comandos](#Principais comandos)
+- [Links](#Links úteis)
+
 ## Preparação de Ambiente
+
+*Caso o esp32 já esteja com o micropython instalado e configurado em seu sistema, pule pare essa [etapa](#Controlando o esp32). Se não, siga o passo a passso abaixo.*
 
 ## Configurando o esp32 em seu computador
 
@@ -16,7 +30,7 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
     alias get_esp32="export PATH=$PATH:$HOME/esp/xtensa-esp32-elf/bin"
     export IDF_PATH=~/esp/esp-idf
 
-1.3. Instale as dependências
+1.3. Instale as dependências 
 
 `sudo apt-get install git wget make libncurses-dev flex bison gperf python python-serial`
 
@@ -131,7 +145,7 @@ Em seguida, siga exatamente a mesma configuração anterior, exceto pelos passos
 #### Descobrindo a porta em que o ESP esta conectado
 
 No **Gerenciador de Dispositivos** do Windows, procure por *Portas (COM e LPT)* e verifique a numeração. 
-Ex.: (COM 3). Então a porta será ´ttyS3´, localizada em ´/dev/ttyS3´.
+Ex.: (COM 3). Então a porta será `ttyS3`, localizada em `/dev/ttyS3`.
 
 ## Controlando o esp32
 Para manipular os arquivos entre o esp32 e o computador, podemos utilizar o `rshell`, com ele é possível enviar arquivos do PC para o microcontrolador e vice-versa, assim como deletar, e listar.
@@ -153,7 +167,10 @@ sudo pip3 install rshell
 #### Principais comandos
 
 ##### Conectando o esp32
-
+Antes talvez seja necessário dar permissão para ter acesso à porta em que o esp32 esta conectado
+```bash
+sudo chmod 777 /dev/{nome_da_porta}
+```
 Primeiramente entre no rshell digitando `rshell` no terminal. 
 
 Em seguida conecte o esp:
@@ -205,4 +222,4 @@ EX:
 - [Getting started do ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/)
 - [Toolchain no Linux](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/linux-setup.html)
 - [Getting started Micropython com ESP32](http://docs.micropython.org/en/latest/esp32/tutorial/intro.html#esp32-intro)
-
+- [Bibliotecas para MicroPython](https://github.com/micropython/micropython-lib)
