@@ -15,7 +15,7 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ## Preparação de Ambiente
 
-*Caso o esp32 já esteja com o micropython instalado e configurado em seu sistema, pule pare essa [etapa](#Controlando o esp32). Se não, siga o passo a passso abaixo.*
+*Caso o esp32 já esteja com o micropython instalado e configurado em seu sistema, pule pare essa [etapa](#Controlando-o-esp32). Se não, siga o passo a passso abaixo.*
 
 ## Configurando o esp32 em seu computador
 
