@@ -1,7 +1,7 @@
 # Capacitação de ESP32
 Capacitação básica para esp32 utilizando [MicroPython](https://micropython.org).
 
-## Tabela de Coteúdo
+## Guia de Coteúdo
 
 - [Configurando Esp32](#Configurando-o-esp32-em-seu-computador)
 	 - [Instalação Toolchain](#1instalação-da-toolchain)
