@@ -217,6 +217,9 @@ EX:
 >> led = Pin(2, Pin.OUT)
 >> led.on()
 ```
+
+Para sair do terminal, primeiro pare o programa `ctrl+c` em seguida saia pressionando `ctrl+X`.
+
 #### Links úteis
 - [Guia de programação do ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/) (Espressif IoT development framework)
 - [Getting started do ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/)
