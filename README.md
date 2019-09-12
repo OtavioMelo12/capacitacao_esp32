@@ -3,15 +3,15 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ## Tabela de Coteúdo
 
-- [Configurando Esp32](#Configurando o esp32 em seu computador)
-	 - [Instalação Toolchain](#1. Instalação da toolchain)
-	 - [Instalação ESP-IDF](#2. Instalação da API ESP-IDF)
-	 - [Hello World](#3. Rodando exemplo Hello World)
-	 - [Instalação MicroPython](#4. Instalando o Micropython)
-- [Controlando Esp32](#Controlando o esp32)
-	 - [Instalçao rshell](#Instalação)
-	 - [Principais Comandos](#Principais comandos)
-- [Links](#Links úteis)
+- [Configurando Esp32](#Configurandooesp32emseucomputador)
+	 - [Instalação Toolchain](#1.Instalaçãodatoolchain)
+	 - [Instalação ESP-IDF](#2.InstalaçãodaAPIESP-IDF)
+	 - [Hello World](#3.RodandoexemploHelloWorld)
+	 - [Instalação MicroPython](#4.InstalandooMicropython)
+- [Controlando Esp32](#Controlandooesp32)
+	 - [Instalação rshell](#Instalação)
+	 - [Principais Comandos](#Principaiscomandos)
+- [Links](#Linksúteis)
 
 ## Preparação de Ambiente
 
