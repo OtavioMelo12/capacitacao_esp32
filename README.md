@@ -3,15 +3,15 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ## Tabela de Coteúdo
 
-- [Configurando Esp32](#Configurandooesp32emseucomputador)
-	 - [Instalação Toolchain](#1.Instalaçãodatoolchain)
-	 - [Instalação ESP-IDF](#2.InstalaçãodaAPIESP-IDF)
-	 - [Hello World](#3.RodandoexemploHelloWorld)
-	 - [Instalação MicroPython](#4.InstalandooMicropython)
-- [Controlando Esp32](#Controlandooesp32)
+- [Configurando Esp32](#Configurando-o-esp32-em-seu-computador)
+	 - [Instalação Toolchain](#1.Instalação-da-toolchain)
+	 - [Instalação ESP-IDF](#2.Instalação-da-API-ESP_IDF)
+	 - [Hello World](#3.Rodando-exemplo-Hello-World)
+	 - [Instalação MicroPython](#4.Instalando-o-Micropython)
+- [Controlando Esp32](#Controlando-o-esp32)
 	 - [Instalação rshell](#Instalação)
-	 - [Principais Comandos](#Principaiscomandos)
-- [Links](#Linksúteis)
+	 - [Principais Comandos](#Principais-comandos)
+- [Links](#Links-úteis)
 
 ## Preparação de Ambiente
 
@@ -21,7 +21,7 @@ Capacitação básica para esp32 utilizando [MicroPython](https://micropython.or
 
 ### Utilizando Linux:
 
-### 1. Instalação da toolchain
+### 1.Instalação da toolchain
 1.1. No seu terminal, navegue`$ cd`até a pasta raiz do seu linux, liste`$ ls -a`os arquivos ocultos desse diretório e localize um chamado `~/.bashrc`.
 
 1.2. Edite o arquivo acima adicionando o seguinte trecho no final
@@ -41,12 +41,12 @@ wget -c https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-61-gab8375a-
 tar zxvf xtensa-esp32-elf-linux64-1.22.0-61-gab8375a-5.2.0.tar.gz
 ```
 
-### 2. Instalação da API ESP-IDF
+### 2.Instalação da API ESP-IDF
 Baixe a API. O `--recursive` garantirá que os submódulos do repositório, que são essenciais para compilação, também sejam baixados
 
     git clone --recursive https://github.com/espressif/esp-idf.git
 
-### 3. Rodando exemplo Hello World
+### 3.Rodando exemplo Hello World
 3.1. Copie o exemplo Hello World para a pasta `~/esp`
 ```bash
 cp -r ~/esp/esp-idf/examples/get-started/hello_world/ .
@@ -76,7 +76,7 @@ make monitor ESPPORT=/dev/ttyUSB0
 
 Tudo certo até aqui? Prossiga para a instalação do micropython
 
-### 4. Instalando o Micropython
+### 4.Instalando o Micropython
 4.1. Tenha certeza de que você está no diretório esp-idf/ e baixe o micropython
 ```bash
 git clone https://github.com/pfalcon/micropython
