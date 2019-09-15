@@ -1,5 +1,10 @@
 import picoweb
-from machine import Pin
+from machine import Pin, PWM
+import time
+
+red = Pin(22, Pin.OUT)
+blue = Pin(23, Pin.OUT)
+green = Pin(21, Pin.OUT)
 
 def host_server(event=None, callback=None):
     app = picoweb.WebApp(__name__)
@@ -9,16 +14,20 @@ def host_server(event=None, callback=None):
     def index(req, resp):
         yield from picoweb.start_response(resp)
         if req.method == "POST":
-            Pin(18, Pin.OUT).on()
-            Pin(19, Pin.OUT).on()
+            blue.on()
+            red.on()
+            green.off()
+            
         yield from app.render_template(resp, "index.tpl", (req,))
 
     @app.route("/desliga")
     def index(req, resp):
         yield from picoweb.start_response(resp)
         if req.method == "POST":
-            Pin(18, Pin.OUT).off()
-            Pin(19, Pin.OUT).off()
+            blue.off()
+            red.on()
+            green.on()
+            
         yield from app.render_template(resp, "index.tpl", (req,))
 
     @app.route("/")

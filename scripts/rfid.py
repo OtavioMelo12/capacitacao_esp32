@@ -8,15 +8,14 @@ RF_MOSI = 14  # master-out slave-in
 RF_MISO = 27  # master-in slave-out
 RF_RST = 26  # reset
 
-blue_led = Pin(18, Pin.OUT)
-red_led = Pin(19, Pin.OUT)
+green_led = Pin(21, Pin.OUT)
+red_led = Pin(22, Pin.OUT)
 
 
 class Mfrc522():
-    def __init__(self, allowed_id='0x0907345a'):
+    def __init__(self):
         print("INICIADO RFID")
         self.rdr = mfrc522.MFRC522(RF_SCK, RF_MOSI, RF_MISO, RF_RST, RF_SDA)
-        self.allowed_id = allowed_id
         self.read()
 
     def read(self):
@@ -26,11 +25,11 @@ class Mfrc522():
                 (stat, raw_uid) = self.rdr.anticoll()
                 try:
                     read = "0x%02x%02x%02x%02x" % (raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3])
-                    if read == self.allowed_id:
+                    if read == '0x4e7152c3' or read == '0x0907345a':
                         print("Usuário permitido :) -", read)
-                        blue_led.on()
+                        green_led.on()
                         time.sleep(1)
-                        blue_led.off()
+                        green_led.off()
                     else:
                         print("Usuário não permitido :( -", read)
                         red_led.on()

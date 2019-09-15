@@ -1,9 +1,8 @@
 import time
 from machine import Pin
 
-blue_led = Pin(18, Pin.OUT)
-red_led = Pin(19, Pin.OUT)
-
+blue_led = Pin(23, Pin.OUT)
+red_led = Pin(22, Pin.OUT)
 
 def purple_rain():
     print("INICIOU O CODIGO")
@@ -11,7 +10,7 @@ def purple_rain():
         print("PISCANDO LED...")
         blue_led.on()
         red_led.on()
-        time.sleep_ms(1000)
+        time.sleep(1)
         blue_led.off()
         red_led.off()
-        time.sleep_ms(1000)
+        time.sleep(1)

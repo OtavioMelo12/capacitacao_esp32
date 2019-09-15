@@ -142,6 +142,8 @@ sudo apt-get install python python3 vim
 
 Em seguida, siga exatamente a mesma configuração anterior, exceto pelos passos **3.5** e **3.6**, em que será necessário olhar em qual porta o esp32 esta conectado.
 
+**Para usar o VSCode do Windows como editor de arquivos do Subsistema Linux, basta instalar a extenção 'Remote - WSL'**
+
 #### Descobrindo a porta em que o ESP esta conectado
 
 No **Gerenciador de Dispositivos** do Windows, procure por *Portas (COM e LPT)* e verifique a numeração. 

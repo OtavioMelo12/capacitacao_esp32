@@ -3,7 +3,7 @@
     <head>
         <style rel="stylesheet" type="text/css">
             body{
-                background-color: #680068;
+                background-color: #eaeaea;
                 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             }
             .container {
@@ -44,18 +44,22 @@
                 border-bottom: 1px solid #500707;
                 border-right: 1px solid #500707;
                 transition: 1s;
+		text-shadow: rgb(0,0,0,0.7) 1px 3px 6px;
             }
             .form-button:hover {
                 opacity: 1;
             }
             h1 {
-                color: #FFFFFF;
+                color: #5e2075;
+		font-size: 60px;
+		font-weight:289; 
+		text-shadow: rgb(0,0,0,0.7) 1px 3px 6px;
             }
             .liga {
-                background: #00AA00;
+                background: #5e2075;
             }
             .desliga {
-                background: #AA0000;
+                background: #F22F05;
             }
         </style>
         <meta charset="utf-8">
@@ -64,12 +68,12 @@
     </head>
     <body>
         <div class="container">
-            <h1>Controle do ESP32</h1>
+            <h1>CONTROLE DO ESP32</h1>
             <form action="/liga" class="form-contact" method="post" tabindex="1">
-                <button type="submit" class="form-button liga">Ligar</button>
+                <button type="submit" class="form-button liga">ROXO</button>
             </form>
             <form action="/desliga" class="form-contact" method="post" tabindex="1">
-                <button type="submit" class="form-button desliga">Desligar</button>
+                <button type="submit" class="form-button desliga">LARANJA</button>
             </form>
         </div>
     </body>
